@@ -1,0 +1,169 @@
+{% extends "base.html" %} {% block title %}Main{% endblock %} {% block content
+    %}
+    <div class="container">
+        <div class="row">
+ 
+              <!-- ***** Start Stream Start ***** -->
+              <div class="start-stream">
+                <div class="col-lg-12">
+                  <div class="heading-section">
+                    <h4><em>Gestor</em> Biblioteca Personal</h4>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="item">
+                        <div class="icon">
+                          <img   src=  "{{ url_for('static',filename='assets/images/service-01.jpg') }}" alt="" style="max-width: 60px; border-radius: 50%;">
+                        </div>
+                        <h4>Almacena tus libros favoritos</h4>
+                        <p>Guarda tus libros por Titulo, Autor, Año, Edicion, Imagen y Cantidad.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="item">
+                        <div class="icon">
+                          <img src= "{{ url_for('static',filename='assets/images/service-02.jpg') }}"  alt="" style="max-width: 60px; border-radius: 50%;">
+                        </div>
+                        <h4>Listado Paginado</h4>
+                        <p>Listado de los libros paginado, con la posibilidad de modificar, eliminar y agregar nuevos libros.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="item">
+                        <div class="icon">
+                          <img src=  "{{ url_for('static',filename='assets/images/service-03.jpg') }}"  alt="" style="max-width: 60px; border-radius: 50%;">
+                        </div>
+                        <h4>Busqueda</h4>
+                        <p>Se puede realizar una busqueda por texto y aplicar el filtro por autor o titulo.</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="main-button">
+                        <a href="/">My Books</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Start Stream End ***** -->
+    
+              <!-- ***** Live Stream Start ***** -->
+              <div class="live-stream">
+                <div class="col-lg-12">
+                  <div class="heading-section">
+                    <h4><em>Most Popular</em> Books</h4>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <div class="thumb">
+                        <img src=  "{{ url_for('static',filename='assets/images/stream-01.jpg') }}"  alt="">
+                        <div class="hover-effect">
+                          <div class="content">
+                            <div class="live">
+                              <a href="#">Live</a>
+                            </div>
+                            <ul>
+                       
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-content">
+                        <div class="avatar">
+                          <img src=   "{{ url_for('static',filename='assets/images/avatar-01.jpg') }}"    alt="" style="max-width: 46px; border-radius: 50%; float: left;">
+                        </div>
+                        <span><i class="fa fa-check"></i> J.K.Rowling</span>
+                        <h4>Harry Potter</h4>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <div class="thumb">
+                        <img src=   "{{ url_for('static',filename='assets/images/stream-02.jpg') }}"  alt="">
+                        <div class="hover-effect">
+                          <div class="content">
+                            <div class="live">
+                              <a href="#">Live</a>
+                            </div>
+                            <ul>
+
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-content">
+                        <div class="avatar">
+                          <img src=   "{{ url_for('static',filename='assets/images/avatar-02.jpg') }}"  alt="" style="max-width: 46px; border-radius: 50%; float: left;">
+                        </div>
+                        <span><i class="fa fa-check"></i> Suzanne Collins</span>
+                        <h4>Hunger Games</h4>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <div class="thumb">
+                        <img src= "{{ url_for('static',filename='assets/images/stream-03.jpg') }}"   alt="">
+                        <div class="hover-effect">
+                          <div class="content">
+                            <div class="live">
+                              <a href="#">Live</a>
+                            </div>
+                            <ul>
+      
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-content">
+                        <div class="avatar">
+                          <img src=   "{{ url_for('static',filename='assets/images/avatar-03.jpg') }}"   alt="" style="max-width: 46px; border-radius: 50%; float: left;">
+                        </div>
+                        <span><i class="fa fa-check"></i> Julio Verne</span>
+                        <h4> Viaje al centro de la Tierra</h4>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <div class="thumb">
+                        <img src=   "{{ url_for('static',filename='assets/images/stream-04.jpg') }}" alt="">
+                        <div class="hover-effect">
+                          <div class="content">
+                            <div class="live">
+                              <a href="#">Live</a>
+                            </div>
+                            <ul>
+
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="down-content">
+                        <div class="avatar">
+                          <img src=     "{{ url_for('static',filename='assets/images/avatar-04.jpg') }}" alt="" style="max-width: 46px; border-radius: 50%; float: left;">
+                        </div>
+                        <span><i class="fa fa-check"></i> Cory Althoff</span>
+                        <h4>The self-taught Computer Scientist</h4>
+                      </div> 
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="main-button">
+                      <a href="/books">Agrega mas libros</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ***** Live Stream End ***** -->
+    
+    
+        </div>
+      </div>
+      
+  
+    
+    {% endblock %}
