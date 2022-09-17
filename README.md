@@ -22,6 +22,12 @@ python app.py
 
 Go to `http://127.0.0.1:5000`
 
+## Video
+A full Demo of this project can be found on Drive: [Drive](https://drive.google.com/file/d/1Na8AxznXK5D9_S-QgSAcVOjFgFlImtRy/view?usp=sharing)
+
+![1](https://github.com/Andrescmm/Library-Flask-App/blob/main/img/6.gif)
+
+
 ## Pages of the Web
 
 Login Page
