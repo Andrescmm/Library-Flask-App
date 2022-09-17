@@ -21,3 +21,31 @@ python app.py
 ## Viewing The App
 
 Go to `http://127.0.0.1:5000`
+
+## ScreenShots
+
+Login Page
+
+![Alt text](https://github.com/Andrescmm/Library-Flask-App/blob/main/img/1.png)
+
+Sign-Up Page
+
+
+![Alt text](https://github.com/Andrescmm/Library-Flask-App/blob/main/img/2.png)
+
+
+Main Screen
+
+
+![Alt text](https://github.com/Andrescmm/Library-Flask-App/blob/main/img/3.png)
+
+Library Page
+
+
+![Alt text](https://github.com/Andrescmm/Library-Flask-App/blob/main/img/4.png)
+
+
+Add New Books Page
+
+
+![Alt text](https://github.com/Andrescmm/Library-Flask-App/blob/main/img/5.png)
