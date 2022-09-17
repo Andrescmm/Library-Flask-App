@@ -1,4 +1,3 @@
-from crypt import methods
 from difflib import get_close_matches
 from email.mime import image
 from pdb import post_mortem
