@@ -16,6 +16,8 @@ from flask_wtf.file import FileField
 from wtforms import StringField, SubmitField, PasswordField, BooleanField, ValidationError, TextAreaField
 from wtforms.validators import DataRequired, EqualTo, Length
 import keyword
+import tkinter
+import _tkinter
 
 views = Blueprint('views', __name__)
 
