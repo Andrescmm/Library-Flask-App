@@ -26,6 +26,29 @@ def screen():
     return render_template('screen.html',user=current_user)
 
 
+@views.route('/filterby', methods=['GET', 'POST'])
+@login_required
+def filterby():
+
+    list_of_authors = []
+    authors = Book.query.all()
+    for i in authors:
+       if i.author not in list_of_authors:
+          list_of_authors.append(i.author)
+
+
+
+    list_of_years = []
+    years = Book.query.all()
+    for i in years:
+       if i.year not in list_of_years:
+          list_of_years.append(i.year)
+
+
+    return render_template('filterby.html',user=current_user,list_of_authors=list_of_authors, list_of_years= list_of_years)
+
+
+
 
 @views.route('/', methods=['GET'], defaults={"page": 1}) 
 @views.route('/<int:page>', methods=['GET'])
@@ -35,17 +58,9 @@ def view(page):
     per_page = 5
     threads = Book.query.paginate(page,per_page,error_out=False)
 
+ 
 
-    list_of_authors = []
-    authors = Book.query.all()
-    for i in authors:
-       if i.author not in list_of_authors:
-          list_of_authors.append(i.author)
-
-    school = Book.query.filter_by(author='3').all()
-    print("gaa",school)      
-
-    return render_template("home.html", threads=threads,user=current_user ,list_of_authors=list_of_authors)
+    return render_template("home.html", threads=threads,user=current_user )
 
 
 @views.route('/books', methods=['GET', 'POST'])
@@ -131,4 +146,58 @@ def search():
 
     return render_template("search.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,user=current_user) 
     db.session.commit()
+
+
+
+@views.route('/filter',methods=["POST","GET"])
+@login_required
+def filter():
+    option=request.form.get("comp_select")
+
+    list1=[]
+    list2 =[]
+    list3 =[]
+    list4 =[]
+    list5 =[]
+    list6 =[]
+
+    results = Book.query.all()
+    for i in results:
+        if (option == i.author) :
+            list1.append(i.title)
+            list2.append(i.author)
+            list3.append(i.year)
+            list4.append(i.edition)
+            list5.append(i.image)
+            list6.append(i.amount)
+
+
+    return render_template("filter.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,user=current_user)
+
+
+
+@views.route('/filterYear',methods=['GET', 'POST'])
+@login_required
+def filterYear():
+    option=request.form.get("years")
+
+    list1=[]
+    list2 =[]
+    list3 =[]
+    list4 =[]
+    list5 =[]
+    list6 =[]
+
+    results = Book.query.all()
+    for i in results:
+        if (option==i.year) :
+            list1.append(i.title)
+            list2.append(i.author)
+            list3.append(i.year)
+            list4.append(i.edition)
+            list5.append(i.image)
+            list6.append(i.amount)
+
+
+    return render_template("filterYear.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,user=current_user)
 

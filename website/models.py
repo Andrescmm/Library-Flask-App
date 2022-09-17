@@ -10,7 +10,7 @@ class Book(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(150))
     author = db.Column(db.String(150))
-    year = db.Column(db.Integer)
+    year = db.Column(db.String(50))
     edition = db.Column(db.Integer)
     image = db.Column(db.String(500))
     amount = db.Column(db.Integer)
