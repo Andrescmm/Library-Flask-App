@@ -13,7 +13,13 @@
               <li><h4>Year</h4><span>{{result3[i]}}</span></li>
               <li><h4>Edition</h4><span>{{result4[i]}}</span></li>
               <li><h4>Amount</h4><span>{{result6[i]}}</span></li>
-
+              <li><form action="{{url_for('views.delete', id = result7[i])}}">
+                <button type="submit" class="btn btn-outline-danger">X</button>
+              </form></li>
+              <li><form action="{{url_for('views.update', id = result7[i])}}">
+                <button type="submit" class="btn btn-outline-warning">Edit
+                </button>
+             </form></li>
             </ul>
           </div>
           {% endfor %}  

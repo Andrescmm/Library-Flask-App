@@ -130,6 +130,7 @@ def search():
     list4 =[]
     list5 =[]
     list6 =[]
+    list7 =[]
     #a = get_close_matches(title,['principito','principe','apple','leah'])
     #print(a)
     results = Book.query.all()
@@ -143,8 +144,9 @@ def search():
             list4.append(i.edition)
             list5.append(i.image)
             list6.append(i.amount)
+            list7.append(i.id)
 
-    return render_template("search.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,user=current_user) 
+    return render_template("search.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,result7=list7,user=current_user) 
     db.session.commit()
 
 
@@ -160,6 +162,7 @@ def filter():
     list4 =[]
     list5 =[]
     list6 =[]
+    list7 =[]
 
     results = Book.query.all()
     for i in results:
@@ -170,9 +173,10 @@ def filter():
             list4.append(i.edition)
             list5.append(i.image)
             list6.append(i.amount)
+            list7.append(i.id)
 
 
-    return render_template("filter.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,user=current_user)
+    return render_template("filter.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,result7=list7,user=current_user)
 
 
 
@@ -187,6 +191,7 @@ def filterYear():
     list4 =[]
     list5 =[]
     list6 =[]
+    list7 =[]
 
     results = Book.query.all()
     for i in results:
@@ -197,7 +202,8 @@ def filterYear():
             list4.append(i.edition)
             list5.append(i.image)
             list6.append(i.amount)
+            list7.append(i.id)
 
 
-    return render_template("filterYear.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,user=current_user)
+    return render_template("filterYear.html",count=len(list1), result1 =list1, result2=list2,result3=list3,result4 =list4,result5 =list5,result6 =list6,result7=list7,user=current_user)
 
