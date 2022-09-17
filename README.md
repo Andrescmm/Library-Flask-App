@@ -2,14 +2,14 @@
 
 ## Setup & Installtion
 
-Make sure you have the latest version of Python installed.
+Make sure you have the latest version of Python and pip installed.
 
 ```
 Clone the repository
 ```
 
 ```bash
-pip install -r req.txt
+pip install -r requirements.txt
 ```
 
 ## Running The App
