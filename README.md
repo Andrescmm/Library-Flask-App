@@ -4,8 +4,8 @@
 
 Make sure you have the latest version of Python installed.
 
-```bash
-git clone Andrescmm/Library-Flask-App
+```
+Clone the repository
 ```
 
 ```bash
